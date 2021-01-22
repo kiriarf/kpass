@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2C0FAD25BB158E000A5101 /* PasswordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C0FAC25BB158E000A5101 /* PasswordList.swift */; };
+		FB2C0FBC25BB19F6000A5101 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C0FBB25BB19F6000A5101 /* Header.swift */; };
+		FB2C0FCF25BB234F000A5101 /* PasswordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */; };
 		FB4CB5AF25BAFCDD00E527F6 /* kpassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5AE25BAFCDD00E527F6 /* kpassApp.swift */; };
 		FB4CB5B125BAFCDD00E527F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5B025BAFCDD00E527F6 /* ContentView.swift */; };
 		FB4CB5B325BAFCDF00E527F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4CB5B225BAFCDF00E527F6 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB2C0FAC25BB158E000A5101 /* PasswordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordList.swift; sourceTree = "<group>"; };
+		FB2C0FBB25BB19F6000A5101 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRow.swift; sourceTree = "<group>"; };
 		FB4CB5AB25BAFCDD00E527F6 /* kpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4CB5AE25BAFCDD00E527F6 /* kpassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpassApp.swift; sourceTree = "<group>"; };
 		FB4CB5B025BAFCDD00E527F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +82,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB2C0FC025BB1FC1000A5101 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB2C0FC925BB2001000A5101 /* Passwords */,
+				FB2C0FC825BB1FF7000A5101 /* Helpers */,
+				FB4CB5B025BAFCDD00E527F6 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB2C0FC725BB1FD3000A5101 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB4CB5B925BAFCDF00E527F6 /* kpass.xcdatamodeld */,
+				FB4CB5B725BAFCDF00E527F6 /* Persistence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB2C0FC825BB1FF7000A5101 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB2C0FBB25BB19F6000A5101 /* Header.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FB2C0FC925BB2001000A5101 /* Passwords */ = {
+			isa = PBXGroup;
+			children = (
+				FB2C0FAC25BB158E000A5101 /* PasswordList.swift */,
+				FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */,
+			);
+			path = Passwords;
+			sourceTree = "<group>";
+		};
 		FB4CB5A225BAFCDD00E527F6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +141,11 @@
 		FB4CB5AD25BAFCDD00E527F6 /* kpass */ = {
 			isa = PBXGroup;
 			children = (
+				FB2C0FC725BB1FD3000A5101 /* Model */,
+				FB2C0FC025BB1FC1000A5101 /* Views */,
 				FB4CB5AE25BAFCDD00E527F6 /* kpassApp.swift */,
-				FB4CB5B025BAFCDD00E527F6 /* ContentView.swift */,
 				FB4CB5B225BAFCDF00E527F6 /* Assets.xcassets */,
-				FB4CB5B725BAFCDF00E527F6 /* Persistence.swift */,
 				FB4CB5BC25BAFCDF00E527F6 /* Info.plist */,
-				FB4CB5B925BAFCDF00E527F6 /* kpass.xcdatamodeld */,
 				FB4CB5B425BAFCDF00E527F6 /* Preview Content */,
 			);
 			path = kpass;
@@ -266,8 +307,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB4CB5BB25BAFCDF00E527F6 /* kpass.xcdatamodeld in Sources */,
+				FB2C0FCF25BB234F000A5101 /* PasswordRow.swift in Sources */,
 				FB4CB5B825BAFCDF00E527F6 /* Persistence.swift in Sources */,
+				FB2C0FAD25BB158E000A5101 /* PasswordList.swift in Sources */,
 				FB4CB5B125BAFCDD00E527F6 /* ContentView.swift in Sources */,
+				FB2C0FBC25BB19F6000A5101 /* Header.swift in Sources */,
 				FB4CB5AF25BAFCDD00E527F6 /* kpassApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
