@@ -10,7 +10,6 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-//    @State private var selectedTab = 0
 
     var body: some View {
         TabView {
@@ -26,7 +25,7 @@ struct ContentView: View {
                     Image(systemName: "square.and.pencil")
                 }
                 .tag(2)
-            Text("Settings will be here")
+            SettingsPage()
                 .tabItem {
                     Text("Settings")
                     Image(systemName: "wrench.fill")

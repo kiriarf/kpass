@@ -20,6 +20,7 @@
 		FB4CB5D125BAFCDF00E527F6 /* kpassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5D025BAFCDF00E527F6 /* kpassUITests.swift */; };
 		FB864A9A25C0451C00633F3C /* AddPasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB864A9925C0451C00633F3C /* AddPasswordForm.swift */; };
 		FB8F3D0025C077A000E6A246 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F3CFF25C077A000E6A246 /* GradientButtonStyle.swift */; };
+		FB8F3D0F25C081F500E6A246 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F3D0E25C081F500E6A246 /* SettingsPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FB4CB5D225BAFCDF00E527F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB864A9925C0451C00633F3C /* AddPasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordForm.swift; sourceTree = "<group>"; };
 		FB8F3CFF25C077A000E6A246 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
+		FB8F3D0E25C081F500E6A246 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		FB2C0FC025BB1FC1000A5101 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB8F3D0D25C081E500E6A246 /* Settings */,
 				FB2C0FC925BB2001000A5101 /* Passwords */,
 				FB2C0FC825BB1FF7000A5101 /* Helpers */,
 				FB4CB5B025BAFCDD00E527F6 /* ContentView.swift */,
@@ -181,6 +184,14 @@
 				FB4CB5D225BAFCDF00E527F6 /* Info.plist */,
 			);
 			path = kpassUITests;
+			sourceTree = "<group>";
+		};
+		FB8F3D0D25C081E500E6A246 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FB8F3D0E25C081F500E6A246 /* SettingsPage.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				FB8F3D0025C077A000E6A246 /* GradientButtonStyle.swift in Sources */,
 				FB03EA0A25BB2FE800799A72 /* PasswordDetail.swift in Sources */,
 				FB4CB5AF25BAFCDD00E527F6 /* kpassApp.swift in Sources */,
+				FB8F3D0F25C081F500E6A246 /* SettingsPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
