@@ -26,6 +26,12 @@ struct ContentView: View {
                     Image(systemName: "square.and.pencil")
                 }
                 .tag(2)
+            Text("Settings will be here")
+                .tabItem {
+                    Text("Settings")
+                    Image(systemName: "wrench.fill")
+                }
+                .tag(3)
         }
     }
 }
