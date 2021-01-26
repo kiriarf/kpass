@@ -11,6 +11,7 @@ import CoreData
 struct PasswordDetail: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showPassword = false
+    let pasteboard = UIPasteboard.general
     
     var password: Password
     
@@ -26,15 +27,29 @@ struct PasswordDetail: View {
             
             Text("Password:")
                 .font(.largeTitle)
-            Text(password.password!)
-                .padding()
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+            if !showPassword {
+                Text("*******")
+                    .padding()
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+                Button(action: {
+                    self.showPassword = true
+                }, label: {
+                    Text("Show")
+                }).buttonStyle(GradientButtonStyle())
+            } else {
+                Text(password.password!)
+                    .padding()
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+                Button(action: {
+                    self.showPassword = false
+                }, label: {
+                    Text("Hide")
+                }).buttonStyle(GradientButtonStyle())
+            }
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("Show")
-            }).buttonStyle(GradientButtonStyle())
-            
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                pasteboard.string = password.password
+            }, label: {
                 Text("Copy")
             }).buttonStyle(GradientButtonStyle())
         }
