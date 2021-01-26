@@ -47,7 +47,7 @@ struct AddPasswordForm: View {
                             Text("Add Password")
                         })
                         .alert(isPresented: $isSuccessful) {
-                            Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+                            Alert(title: Text("Success!"), message: Text("Password for \(service) Saved"), dismissButton: .default(Text("Got it!")))
                         }
                     } else {
                         Text("Fill in All Fields to Save")
@@ -81,21 +81,11 @@ struct AddPasswordForm: View {
         do {
             try viewContext.save()
         } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }
-
-#if canImport(UIKit)
-extension View {
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-#endif
 
 struct AddPasswordForm_Previews: PreviewProvider {
     static var previews: some View {
