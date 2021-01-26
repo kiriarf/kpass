@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB03EA0A25BB2FE800799A72 /* PasswordDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03EA0925BB2FE800799A72 /* PasswordDetail.swift */; };
 		FB2C0FAD25BB158E000A5101 /* PasswordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C0FAC25BB158E000A5101 /* PasswordList.swift */; };
 		FB2C0FBC25BB19F6000A5101 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C0FBB25BB19F6000A5101 /* Header.swift */; };
 		FB2C0FCF25BB234F000A5101 /* PasswordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */; };
@@ -18,6 +19,7 @@
 		FB4CB5BB25BAFCDF00E527F6 /* kpass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5B925BAFCDF00E527F6 /* kpass.xcdatamodeld */; };
 		FB4CB5C625BAFCDF00E527F6 /* kpassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5C525BAFCDF00E527F6 /* kpassTests.swift */; };
 		FB4CB5D125BAFCDF00E527F6 /* kpassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5D025BAFCDF00E527F6 /* kpassUITests.swift */; };
+		FB864A9525C0328800633F3C /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB864A9425C0328800633F3C /* AddButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB03EA0925BB2FE800799A72 /* PasswordDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetail.swift; sourceTree = "<group>"; };
 		FB2C0FAC25BB158E000A5101 /* PasswordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordList.swift; sourceTree = "<group>"; };
 		FB2C0FBB25BB19F6000A5101 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRow.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		FB4CB5CC25BAFCDF00E527F6 /* kpassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kpassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4CB5D025BAFCDF00E527F6 /* kpassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpassUITests.swift; sourceTree = "<group>"; };
 		FB4CB5D225BAFCDF00E527F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB864A9425C0328800633F3C /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FB2C0FBB25BB19F6000A5101 /* Header.swift */,
+				FB864A9425C0328800633F3C /* AddButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FB2C0FAC25BB158E000A5101 /* PasswordList.swift */,
+				FB03EA0925BB2FE800799A72 /* PasswordDetail.swift */,
 				FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */,
 			);
 			path = Passwords;
@@ -309,8 +315,10 @@
 				FB4CB5BB25BAFCDF00E527F6 /* kpass.xcdatamodeld in Sources */,
 				FB2C0FCF25BB234F000A5101 /* PasswordRow.swift in Sources */,
 				FB4CB5B825BAFCDF00E527F6 /* Persistence.swift in Sources */,
+				FB864A9525C0328800633F3C /* AddButton.swift in Sources */,
 				FB2C0FAD25BB158E000A5101 /* PasswordList.swift in Sources */,
 				FB4CB5B125BAFCDD00E527F6 /* ContentView.swift in Sources */,
+				FB03EA0A25BB2FE800799A72 /* PasswordDetail.swift in Sources */,
 				FB2C0FBC25BB19F6000A5101 /* Header.swift in Sources */,
 				FB4CB5AF25BAFCDD00E527F6 /* kpassApp.swift in Sources */,
 			);

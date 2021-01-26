@@ -10,13 +10,23 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+//    @State private var selectedTab = 0
 
     var body: some View {
-        VStack {
-            Header()
-            Divider()
+        TabView {
             PasswordList()
-        }.padding()
+                .tabItem {
+                    Text("All Passwords")
+                    Image(systemName: "tray.full.fill")
+                }
+                .tag(1)
+            Text("hi222")
+                .tabItem {
+                    Text("New Password")
+                    Image(systemName: "square.and.pencil")
+                }
+                .tag(2)
+        }
     }
 }
 

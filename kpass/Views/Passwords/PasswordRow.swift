@@ -5,18 +5,27 @@
 //  Created by Kiril Drobysevskij on 22/01/2021.
 //
 
-//import SwiftUI
-//
-//struct PasswordRow: View {
-//    var password: Password
-//    
-//    var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//    }
-//}
-//
-//struct PasswordRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PasswordRow()
-//    }
-//}
+import SwiftUI
+import CoreData
+
+struct PasswordRow: View {
+    var password: Password
+    
+    var body: some View {
+        HStack {
+            Text(password.service!)
+                .font(.title)
+        }
+    }
+}
+
+struct PasswordRow_Previews: PreviewProvider {
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Password.service, ascending: true)],
+        animation: .default)
+    static var passwords: FetchedResults<Password>
+    
+    static var previews: some View {
+        PasswordRow(password: passwords[0])
+    }
+}

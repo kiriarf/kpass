@@ -1,30 +1,39 @@
 //
-//  Header.swift
+//  AddButton.swift
 //  kpass
 //
-//  Created by Kiril Drobysevskij on 22/01/2021.
+//  Created by Kiril Drobysevskij on 26/01/2021.
 //
 
 import SwiftUI
+import CoreData
 
-struct Header: View {
+struct AddButton: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State var serviceName: String = ""
+    @State var passwordString: String = ""
     @State private var willMoveToNextScreen = false
     
     var body: some View {
-        HStack {
-//            Text("My Passwords")
-//                .font(.largeTitle)
-//                .fontWeight(.bold)
-//            Spacer()
-////            Button(action: addPassword) {
-////                Label("Add Password", systemImage: "plus")
-////            }
-            AddButton()
+        Button(action: {}) {
+            Label("Add Password", systemImage: "plus")
         }
-        .padding(.vertical, -5.0)
-    }
-
+        
+//        NavigationView {
+////            NavigationLink(destination: Text("yeeyee")) {
+////                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+////                    Image(systemName: "plus")
+////                })
+//                HStack {
+//                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+//                        Image(systemName: "plus")
+//                    })
+////                    Text("Hello World B")
+//                }.navigationBarTitle("")
+//                .navigationBarHidden(true)
+//            }
+        }
+    
     private func addPassword() {
         withAnimation {
             let newPassword = Password(context: viewContext)
@@ -43,8 +52,8 @@ struct Header: View {
     }
 }
 
-struct Header_Previews: PreviewProvider {
+struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
-        Header()
+        AddButton()
     }
 }

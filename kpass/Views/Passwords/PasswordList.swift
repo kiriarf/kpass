@@ -17,14 +17,15 @@ struct PasswordList: View {
     private var passwords: FetchedResults<Password>
     
     var body: some View {
-        List {
-            ForEach(passwords) { password in
-                HStack {
-                    Text(password.service!)
-                    Text(password.password!)
-                }
+        NavigationView {
+            List {
+                ForEach(passwords) { password in
+                    NavigationLink(destination: PasswordDetail(password: password)) {
+                        PasswordRow(password: password)
+                    }
+                }.onDelete(perform: deletePasswords)
+                .navigationBarTitle("All Passwords")
             }
-            .onDelete(perform: deletePasswords)
         }
     }
     
