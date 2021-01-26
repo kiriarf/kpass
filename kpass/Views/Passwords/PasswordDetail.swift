@@ -10,37 +10,39 @@ import CoreData
 
 struct PasswordDetail: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var showPassword = false
     
     var password: Password
     
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("Username:")
-                Text(password.username!)
-                    .padding()
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-                Spacer()
-            }
+        VStack(alignment: .leading) {
+            //Username details
+            Text("Username:")
+                .font(.largeTitle)
+            Text(password.username!)
+                .padding()
+                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
             
-            HStack {
-                Text("Password:")
-                Text(password.password!)
-                    .padding()
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-                Spacer()
-                    
-            }
+            Text("Password:")
+                .font(.largeTitle)
+            Text(password.password!)
+                .padding()
+                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
             
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Text("Show")
+            }).buttonStyle(GradientButtonStyle())
+            
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Text("Copy")
+            }).buttonStyle(GradientButtonStyle())
         }
-        .padding()
+        .padding(/*@START_MENU_TOKEN@*/.leading, -150.0/*@END_MENU_TOKEN@*/)
+        .padding(.top, -300.0)
         .navigationTitle(password.service!)
         .navigationBarTitleDisplayMode(.inline)
-        
-        
-        
-        
+
 //        VStack {
 //            HStack {
 //                Button(action: {
@@ -62,8 +64,7 @@ struct PasswordDetail: View {
             //Password in *****
             //Show button
             //Copy button
-        
-        
+ 
     }
 }
 

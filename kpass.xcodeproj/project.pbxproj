@@ -21,6 +21,7 @@
 		FB4CB5D125BAFCDF00E527F6 /* kpassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5D025BAFCDF00E527F6 /* kpassUITests.swift */; };
 		FB864A9525C0328800633F3C /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB864A9425C0328800633F3C /* AddButton.swift */; };
 		FB864A9A25C0451C00633F3C /* AddPasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB864A9925C0451C00633F3C /* AddPasswordForm.swift */; };
+		FB8F3D0025C077A000E6A246 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F3CFF25C077A000E6A246 /* GradientButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FB4CB5D225BAFCDF00E527F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB864A9425C0328800633F3C /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		FB864A9925C0451C00633F3C /* AddPasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordForm.swift; sourceTree = "<group>"; };
+		FB8F3CFF25C077A000E6A246 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				FB2C0FBB25BB19F6000A5101 /* Header.swift */,
 				FB864A9425C0328800633F3C /* AddButton.swift */,
+				FB8F3CFF25C077A000E6A246 /* GradientButtonStyle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				FB864A9A25C0451C00633F3C /* AddPasswordForm.swift in Sources */,
 				FB2C0FAD25BB158E000A5101 /* PasswordList.swift in Sources */,
 				FB4CB5B125BAFCDD00E527F6 /* ContentView.swift in Sources */,
+				FB8F3D0025C077A000E6A246 /* GradientButtonStyle.swift in Sources */,
 				FB03EA0A25BB2FE800799A72 /* PasswordDetail.swift in Sources */,
 				FB2C0FBC25BB19F6000A5101 /* Header.swift in Sources */,
 				FB4CB5AF25BAFCDD00E527F6 /* kpassApp.swift in Sources */,
