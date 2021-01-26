@@ -5,7 +5,7 @@
         <attribute name="service" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <entity name="Password" representedClassName="Password" syncable="YES" codeGenerationType="class">
+    <entity name="Password" representedClassName=".Password" syncable="YES" codeGenerationType="class">
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="service" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>

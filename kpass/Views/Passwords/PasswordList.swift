@@ -46,7 +46,7 @@ struct PasswordList: View {
 }
 
 struct PasswordList_Previews: PreviewProvider {
-    static var previews: some View {
-        PasswordList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    static var previews: some View {        
+        return PasswordList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

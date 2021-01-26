@@ -13,10 +13,17 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
+        
+        let pwd1 = Password(context: viewContext)
+        pwd1.service = "Twitter"
+        pwd1.username = "dummy123"
+        pwd1.password = "Pwd1234"
+        
+        let pwd2 = Password(context: viewContext)
+        pwd2.service = "Battle.net"
+        pwd2.username = "gamergirl228"
+        pwd2.password = "ilovetracer"
+        
         do {
             try viewContext.save()
         } catch {

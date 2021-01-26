@@ -17,17 +17,43 @@ struct PasswordDetail: View {
     var body: some View {
         VStack {
             HStack {
-                Button(action: {
-                    //editPassword
-                }) {
-                    Image(systemName: "pencil")
-                }
+                Text("Username:")
+                Text(password.username!)
+                    .padding()
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+                Spacer()
             }
-            Text("Password: *******")
-            Text("Password: \(password.password!)")
+            
+            HStack {
+                Text("Password:")
+                Text(password.password!)
+                    .padding()
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+                Spacer()
+                    
+            }
+            
         }
+        .padding()
         .navigationTitle(password.service!)
         .navigationBarTitleDisplayMode(.inline)
+        
+        
+        
+        
+//        VStack {
+//            HStack {
+//                Button(action: {
+//                    //editPassword
+//                }) {
+//                    Image(systemName: "pencil")
+//                }
+//            }
+//            Text("Password: *******")
+//            Text("Password: \(password.password!)")
+//        }
+//        .navigationTitle(password.service!)
+//        .navigationBarTitleDisplayMode(.inline)
         
         //TITLE
             //Edit button with pencil
@@ -41,8 +67,14 @@ struct PasswordDetail: View {
     }
 }
 
-//struct PasswordDetail_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PasswordDetail()
-//    }
-//}
+struct PasswordDetail_Previews: PreviewProvider {
+    @Environment(\.managedObjectContext) static var viewContext2
+
+    static var previews: some View {
+        let examplePwd = Password(context: viewContext2)
+        examplePwd.service = "Twitter"
+        examplePwd.username = "kiriarf"
+        examplePwd.password = "Password123!"
+        return PasswordDetail(password: examplePwd)
+    }
+}
