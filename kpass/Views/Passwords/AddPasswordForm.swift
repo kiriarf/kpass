@@ -48,7 +48,9 @@ struct AddPasswordForm: View {
                             Text("Add Password")
                         })
                         .alert(isPresented: $isSuccessful) {
-                            Alert(title: Text("Success!"), message: Text("Password for \(service) Saved"), dismissButton: .default(Text("Got it!")))
+                            Alert(title: Text("Success!"), message: Text("Password for \(service) Saved"), dismissButton: .default(Text("Got it!")) {
+                                self.clearFields()
+                            })
                         }
                     } else {
                         Text("Fill in All Fields to Save")
@@ -74,13 +76,19 @@ struct AddPasswordForm: View {
         return true
     }
     
+    private func clearFields() {
+        self.service = ""
+        self.username = ""
+        self.password = ""
+    }
+    
     //create a new instance of Password with values from text fields and try save it
     private func addPassword() {
         let newPassword = Password(context: viewContext)
         newPassword.service = service
         newPassword.username = username
         newPassword.password = password
-
+        
         do {
             try viewContext.save()
         } catch {
