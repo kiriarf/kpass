@@ -20,7 +20,7 @@ struct ContentView: View {
                     Image(systemName: "tray.full.fill")
                 }
                 .tag(1)
-            Text("hi222")
+            AddPasswordForm()
                 .tabItem {
                     Text("New Password")
                     Image(systemName: "square.and.pencil")

@@ -15,7 +15,7 @@ struct PasswordDetail: View {
     
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             HStack {
                 Button(action: {
                     //editPassword
