@@ -38,6 +38,7 @@ struct AddPasswordForm: View {
                         })
                     }
                     
+                    //Show button to add password only when all fields filled in
                     if self.isInfoValid() {
                         Button(action: {
                             addPassword()
@@ -59,6 +60,7 @@ struct AddPasswordForm: View {
         }
     }
     
+    //check if all fields have values
     private func isInfoValid() -> Bool {
         if service.isEmpty {
             return false
@@ -72,6 +74,7 @@ struct AddPasswordForm: View {
         return true
     }
     
+    //create a new instance of Password with values from text fields and try save it
     private func addPassword() {
         let newPassword = Password(context: viewContext)
         newPassword.service = service
