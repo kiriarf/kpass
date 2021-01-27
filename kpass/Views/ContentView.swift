@@ -44,7 +44,11 @@ struct ContentView: View {
                 .buttonStyle(GradientButtonStyle())
             }
             
-        }
+        }.onReceive(NotificationCenter.default.publisher(for:
+            UIApplication.willResignActiveNotification)) {
+                _ in
+                self.isUnlocked = false
+            }
     }
     
     func authenticate() {
