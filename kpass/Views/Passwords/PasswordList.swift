@@ -18,14 +18,19 @@ struct PasswordList: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(passwords) { password in
-                    NavigationLink(destination: PasswordDetail(password: password)) {
-                        PasswordRow(password: password)
-                    }
-                }.onDelete(perform: deletePasswords)
-                .navigationBarTitle("All Passwords")
+            if !passwords.isEmpty {
+                List {
+                    ForEach(passwords) { password in
+                        NavigationLink(destination: PasswordDetail(password: password)) {
+                            PasswordRow(password: password)
+                        }
+                    }.onDelete(perform: deletePasswords)
+                    .navigationBarTitle("All Passwords")
+                }
+            } else {
+                Text("add smth lol")
             }
+            
         }
     }
     
