@@ -10,76 +10,78 @@ import CoreData
 
 struct PasswordDetail: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @State private var showPassword = false
     let pasteboard = UIPasteboard.general
-    
     var password: Password
-    
+    @State private var showPassword = false
+    @State private var isEditPressed = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            //Username details
-            Text("Username:")
-                .font(.largeTitle)
-            Text(password.username!)
-                .padding()
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-            
-            Text("Password:")
-                .font(.largeTitle)
-            if !showPassword {
-                Text("*******")
-                    .padding()
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-                Button(action: {
-                    self.showPassword = true
-                }, label: {
-                    Text("Show")
-                }).buttonStyle(GradientButtonStyle())
+        ZStack {
+            if !isEditPressed {
+                VStack(alignment: .leading) {
+                    //Username details
+                    Text("Username:")
+                        .font(.largeTitle)
+                    Text(password.username!)
+                        .padding()
+                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+                    
+                    Text("Password:")
+                        .font(.largeTitle)
+                    if !showPassword {
+                        Text("*******")
+                            .padding()
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+                        Button(action: {
+                            self.showPassword = true
+                        }, label: {
+                            Text("Show")
+                        }).buttonStyle(GradientButtonStyle())
+                    } else {
+                        Text(password.password!)
+                            .padding()
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+                        Button(action: {
+                            self.showPassword = false
+                        }, label: {
+                            Text("Hide")
+                        }).buttonStyle(GradientButtonStyle())
+                    }
+                    
+                    Button(action: {
+                        pasteboard.string = password.password
+                    }, label: {
+                        Text("Copy")
+                    }).buttonStyle(GradientButtonStyle())
+                    
+                    Button(action: {
+                        self.isEditPressed = true
+                    }, label: {
+                        Text("Edit")
+                    }).buttonStyle(GradientButtonStyle())
+                }
+                .padding(/*@START_MENU_TOKEN@*/.leading, -150.0/*@END_MENU_TOKEN@*/)
+                .padding(.top, -300.0)
+                .navigationTitle(password.service!)
+                .navigationBarTitleDisplayMode(.inline)
             } else {
-                Text(password.password!)
-                    .padding()
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-                Button(action: {
-                    self.showPassword = false
-                }, label: {
-                    Text("Hide")
-                }).buttonStyle(GradientButtonStyle())
+                Text("YEEHAW PARDNER")
+                //add edit form here
+//                EditPasswordForm(password: password, usrnm: password.username, pwd: password.password )
             }
             
-            Button(action: {
-                pasteboard.string = password.password
-            }, label: {
-                Text("Copy")
-            }).buttonStyle(GradientButtonStyle())
+            
         }
-        .padding(/*@START_MENU_TOKEN@*/.leading, -150.0/*@END_MENU_TOKEN@*/)
-        .padding(.top, -300.0)
-        .navigationTitle(password.service!)
-        .navigationBarTitleDisplayMode(.inline)
-
-//        VStack {
-//            HStack {
-//                Button(action: {
-//                    //editPassword
-//                }) {
-//                    Image(systemName: "pencil")
-//                }
-//            }
-//            Text("Password: *******")
-//            Text("Password: \(password.password!)")
-//        }
-//        .navigationTitle(password.service!)
-//        .navigationBarTitleDisplayMode(.inline)
-        
-        //TITLE
-            //Edit button with pencil
-        
-        //BOX
-            //Password in *****
-            //Show button
-            //Copy button
- 
+    }
+    
+    private func editPassword(_ password: Password) {
+        password.username = "Updated"
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
 }
 

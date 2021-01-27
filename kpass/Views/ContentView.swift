@@ -7,32 +7,72 @@
 
 import SwiftUI
 import CoreData
+import LocalAuthentication
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var isUnlocked = false
 
     var body: some View {
-        TabView {
-            PasswordList()
-                .tabItem {
-                    Text("All Passwords")
-                    Image(systemName: "tray.full.fill")
+        
+        ZStack {
+            if isUnlocked {
+                TabView {
+                    PasswordList()
+                        .tabItem {
+                            Text("All Passwords")
+                            Image(systemName: "tray.full.fill")
+                        }
+                        .tag(1)
+                    AddPasswordForm()
+                        .tabItem {
+                            Text("New Password")
+                            Image(systemName: "square.and.pencil")
+                        }
+                        .tag(2)
+                    SettingsPage()
+                        .tabItem {
+                            Text("Settings")
+                            Image(systemName: "wrench.fill")
+                        }
+                        .tag(3)
                 }
-                .tag(1)
-            AddPasswordForm()
-                .tabItem {
-                    Text("New Password")
-                    Image(systemName: "square.and.pencil")
+            } else {
+                Button("Unlock Passwords") {
+                    self.authenticate()
                 }
-                .tag(2)
-            SettingsPage()
-                .tabItem {
-                    Text("Settings")
-                    Image(systemName: "wrench.fill")
+                .buttonStyle(GradientButtonStyle())
+            }
+            
+        }.onReceive(NotificationCenter.default.publisher(for:
+            UIApplication.willResignActiveNotification)) {
+                _ in
+                self.isUnlocked = false
+            }
+    }
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Please authenticate yourself to see your passwords."
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+
+                DispatchQueue.main.async {
+                    if success {
+                        self.isUnlocked = true
+                    } else {
+                        print(error?.localizedDescription ?? "Failed to authenticate :(")
+                    }
                 }
-                .tag(3)
+            }
+        } else {
+            // no biometrics
         }
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
