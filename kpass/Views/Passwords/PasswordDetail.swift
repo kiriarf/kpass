@@ -13,7 +13,7 @@ struct PasswordDetail: View {
     let pasteboard = UIPasteboard.general
     var password: Password
     @State private var showPassword = false
-    @State private var isEditPressed = false
+    @State var isEditPressed = false
     
     var body: some View {
         ZStack {
@@ -65,9 +65,7 @@ struct PasswordDetail: View {
                 .navigationTitle(password.service!)
                 .navigationBarTitleDisplayMode(.inline)
             } else {
-                Text("YEEHAW PARDNER")
-                //add edit form here
-//                EditPasswordForm(password: password, usrnm: password.username, pwd: password.password )
+                EditPasswordForm(model: password, service: password.service!, username: password.username!, password: password.password!, valueFromDetail: $isEditPressed)
             }
             
             

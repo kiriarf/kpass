@@ -10,6 +10,7 @@
 		FB03EA0A25BB2FE800799A72 /* PasswordDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03EA0925BB2FE800799A72 /* PasswordDetail.swift */; };
 		FB2C0FAD25BB158E000A5101 /* PasswordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C0FAC25BB158E000A5101 /* PasswordList.swift */; };
 		FB2C0FCF25BB234F000A5101 /* PasswordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */; };
+		FB41274425C2FB7500C00C93 /* EditPasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41274325C2FB7500C00C93 /* EditPasswordForm.swift */; };
 		FB4CB5AF25BAFCDD00E527F6 /* kpassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5AE25BAFCDD00E527F6 /* kpassApp.swift */; };
 		FB4CB5B125BAFCDD00E527F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5B025BAFCDD00E527F6 /* ContentView.swift */; };
 		FB4CB5B325BAFCDF00E527F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4CB5B225BAFCDF00E527F6 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		FB03EA0925BB2FE800799A72 /* PasswordDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetail.swift; sourceTree = "<group>"; };
 		FB2C0FAC25BB158E000A5101 /* PasswordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordList.swift; sourceTree = "<group>"; };
 		FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRow.swift; sourceTree = "<group>"; };
+		FB41274325C2FB7500C00C93 /* EditPasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordForm.swift; sourceTree = "<group>"; };
 		FB4CB5AB25BAFCDD00E527F6 /* kpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4CB5AE25BAFCDD00E527F6 /* kpassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpassApp.swift; sourceTree = "<group>"; };
 		FB4CB5B025BAFCDD00E527F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				FB03EA0925BB2FE800799A72 /* PasswordDetail.swift */,
 				FB2C0FCE25BB234F000A5101 /* PasswordRow.swift */,
 				FB864A9925C0451C00633F3C /* AddPasswordForm.swift */,
+				FB41274325C2FB7500C00C93 /* EditPasswordForm.swift */,
 			);
 			path = Passwords;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				FB4CB5B125BAFCDD00E527F6 /* ContentView.swift in Sources */,
 				FB8F3D0025C077A000E6A246 /* GradientButtonStyle.swift in Sources */,
 				FB03EA0A25BB2FE800799A72 /* PasswordDetail.swift in Sources */,
+				FB41274425C2FB7500C00C93 /* EditPasswordForm.swift in Sources */,
 				FB4CB5AF25BAFCDD00E527F6 /* kpassApp.swift in Sources */,
 				FB8F3D0F25C081F500E6A246 /* SettingsPage.swift in Sources */,
 			);
