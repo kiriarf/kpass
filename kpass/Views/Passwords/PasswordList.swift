@@ -17,8 +17,8 @@ struct PasswordList: View {
     private var passwords: FetchedResults<Password>
     
     var body: some View {
-        NavigationView {
-            if !passwords.isEmpty {
+        if !passwords.isEmpty {
+            NavigationView {
                 List {
                     ForEach(passwords) { password in
                         NavigationLink(destination: PasswordDetail(password: password)) {
@@ -27,11 +27,15 @@ struct PasswordList: View {
                     }.onDelete(perform: deletePasswords)
                     .navigationBarTitle("All Passwords")
                 }
-            } else {
-                Text("add smth lol")
             }
-            
+        } else {
+            Text("You don't have anything here! \nStart by adding your first password.")
+                .foregroundColor(Color.gray)
+                .padding()
+                .font(.largeTitle)
         }
+        
+        
     }
     
     private func deletePasswords(offsets: IndexSet) {
