@@ -5,6 +5,18 @@ kpass is a simple-to-use password manager app. I built it for two reasons:
 
 2. I don't like any of the existing password managers. I wanted to have something that I can use quickly and without an internet connection to ensure that my data is not going anywhere (except for Apple, in this case).
 
+kpass utilises Apple's Core Data framework to ensure persistence of your data even when the app is closed. It also uses FaceID for locking the app away from unwanted users. If the app is put into background, it will immediately lock itself.
+
+## Tech Stack
+
+| Technology          | Use                               |
+| ------------------- | --------------------------------- |
+| Swift               | Language                          |
+| SwiftUI             | Creating views                    |
+| Core Data           | Data persistence on flash storage |
+| LocalAuthentication | Locking the app behind FaceID     |
+
+
 ## Setup
 
 1. [Install Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)  
