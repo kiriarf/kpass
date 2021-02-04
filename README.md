@@ -13,7 +13,7 @@ kpass is a simple-to-use password manager app. I built it for two reasons:
 
 ### If You Have an iPhone with FaceID
 1. Connect it to your computer and choose it as the simulator device.  
-![iphonesimulator](screenshots/iphonesim.png)
+<img src="screenshots/iphonesim.png" width="600">  
 2. Build the project. 
 3. Accept the FaceID request.  
 4. Click Unlock Password and use FaceID.  
