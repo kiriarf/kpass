@@ -51,7 +51,7 @@ On this screen, you have three buttons:
 ![show](screenshots/show.png)
 2. The copy button will copy the password to your clipboard.   
 3. The pencil button will take you to the Edit Password page.   
-<img src="screenshots/editpwd.png" width="100">
+<img src="screenshots/editpwd.png" width="250">
 
 ## Bugs
 - All passwords page -> Title not showing 
