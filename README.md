@@ -44,8 +44,8 @@ Note: the Add Password button will only show up once all the fields are not blan
 Once you have something saved, you can go back to the All Passwords tab, where you will find your list.
 ![allpwds](screenshots/allpwds.png)
 
-Tap on one of the items, and you will be taken to a detail screen:
-<img src="screenshots/google.png" width="500">
+Tap on one of the items, and you will be taken to a detail screen:  
+<img src="screenshots/google.png" width="300">
 On this screen, you have three buttons: 
 1. The eye button will show or hide your password.  
 <img src="screenshots/show.png" width="150">
