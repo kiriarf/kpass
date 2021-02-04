@@ -30,19 +30,20 @@ kpass is a simple-to-use password manager app. I built it for two reasons:
 
 ## How to Use
 
-If you don't have any passwords, you will be greeted with this screen on the All Passwords page:
-![empty](screenshots/empty.png)
+If you don't have any passwords, you will be greeted with this screen on the All Passwords page:   
+<img src="screenshots/empty.png" width="300">  
 
 ### Adding a Password
 
-Go to the New Password tab, and fill in the form:
-![addpwd1](screenshots/addpwd1.png)
+Go to the New Password tab, and fill in the form:     
+<img src="screenshots/addpwd1.png" width="300">  
+
 Note: the Add Password button will only show up once all the fields are not blank. You can also use the Show toggle to see what you're typing.
 
 ### Using Your Passwords
 
-Once you have something saved, you can go back to the All Passwords tab, where you will find your list.
-![allpwds](screenshots/allpwds.png)
+Once you have something saved, you can go back to the All Passwords tab, where you will find your list.  
+<img src="screenshots/allpwds.png" width="300">  
 
 Tap on one of the items, and you will be taken to a detail screen:  
 <img src="screenshots/google.png" width="300">       
