@@ -17,8 +17,6 @@
 		FB4CB5B625BAFCDF00E527F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4CB5B525BAFCDF00E527F6 /* Preview Assets.xcassets */; };
 		FB4CB5B825BAFCDF00E527F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5B725BAFCDF00E527F6 /* Persistence.swift */; };
 		FB4CB5BB25BAFCDF00E527F6 /* kpass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5B925BAFCDF00E527F6 /* kpass.xcdatamodeld */; };
-		FB4CB5C625BAFCDF00E527F6 /* kpassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5C525BAFCDF00E527F6 /* kpassTests.swift */; };
-		FB4CB5D125BAFCDF00E527F6 /* kpassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CB5D025BAFCDF00E527F6 /* kpassUITests.swift */; };
 		FB864A9A25C0451C00633F3C /* AddPasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB864A9925C0451C00633F3C /* AddPasswordForm.swift */; };
 		FB8F3D0025C077A000E6A246 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F3CFF25C077A000E6A246 /* GradientButtonStyle.swift */; };
 		FB8F3D0F25C081F500E6A246 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F3D0E25C081F500E6A246 /* SettingsPage.swift */; };
@@ -55,11 +53,7 @@
 		FB4CB5BA25BAFCDF00E527F6 /* kpass.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kpass.xcdatamodel; sourceTree = "<group>"; };
 		FB4CB5BC25BAFCDF00E527F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB4CB5C125BAFCDF00E527F6 /* kpassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kpassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB4CB5C525BAFCDF00E527F6 /* kpassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpassTests.swift; sourceTree = "<group>"; };
-		FB4CB5C725BAFCDF00E527F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB4CB5CC25BAFCDF00E527F6 /* kpassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kpassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB4CB5D025BAFCDF00E527F6 /* kpassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kpassUITests.swift; sourceTree = "<group>"; };
-		FB4CB5D225BAFCDF00E527F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB864A9925C0451C00633F3C /* AddPasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordForm.swift; sourceTree = "<group>"; };
 		FB8F3CFF25C077A000E6A246 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		FB8F3D0E25C081F500E6A246 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
@@ -134,8 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				FB4CB5AD25BAFCDD00E527F6 /* kpass */,
-				FB4CB5C425BAFCDF00E527F6 /* kpassTests */,
-				FB4CB5CF25BAFCDF00E527F6 /* kpassUITests */,
 				FB4CB5AC25BAFCDD00E527F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -169,24 +161,6 @@
 				FB4CB5B525BAFCDF00E527F6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FB4CB5C425BAFCDF00E527F6 /* kpassTests */ = {
-			isa = PBXGroup;
-			children = (
-				FB4CB5C525BAFCDF00E527F6 /* kpassTests.swift */,
-				FB4CB5C725BAFCDF00E527F6 /* Info.plist */,
-			);
-			path = kpassTests;
-			sourceTree = "<group>";
-		};
-		FB4CB5CF25BAFCDF00E527F6 /* kpassUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FB4CB5D025BAFCDF00E527F6 /* kpassUITests.swift */,
-				FB4CB5D225BAFCDF00E527F6 /* Info.plist */,
-			);
-			path = kpassUITests;
 			sourceTree = "<group>";
 		};
 		FB8F3D0D25C081E500E6A246 /* Settings */ = {
@@ -344,7 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4CB5C625BAFCDF00E527F6 /* kpassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +325,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4CB5D125BAFCDF00E527F6 /* kpassUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
