@@ -47,10 +47,10 @@ Once you have something saved, you can go back to the All Passwords tab, where y
 Tap on one of the items, and you will be taken to a detail screen:
 ![google](screenshots/google.png)
 On this screen, you have three buttons: 
-- The eye button will show or hide your password
+- The eye button will show or hide your password. 
 ![show](screenshots/show.png)
-- The copy button will copy the password to your clipboard
-- The pencil button will take you to the Edit Password page
+- The copy button will copy the password to your clipboard. 
+- The pencil button will take you to the Edit Password page. 
 ![editpwd](screenshots/editpwd.png)
 
 ## Bugs
