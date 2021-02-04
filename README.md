@@ -20,13 +20,13 @@ kpass is a simple-to-use password manager app. I built it for two reasons:
 
 ### If You Don't Have an iPhone with FaceID
 1. Choose iPhone X or later.  
-![xcodesimulator](screenshots/xcodesim.png)
+<img src="screenshots/xcodesim.png" width="600">  
 2. Build the project.  
 3. Got to Feature > FaceID > Enrolled.  
-![enrolled](screenshots/enrolled.png)
+<img src="screenshots/enrolled.png" width="600">  
 4. Click Unlock Passwords button.  
 5. Go to Features > FaceID > Matching Face.  
-![matchingface](screenshots/matchingface.png)
+<img src="screenshots/matchingface.png" width="600">  
 
 ## How to Use
 
