@@ -11,9 +11,9 @@ import SwiftUI
 struct GradientButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .foregroundColor(Color.white)
+            .foregroundColor(Color("buttonTextColor"))
             .padding()
-            .background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.gray]), startPoint: .leading, endPoint: .trailing))
-            .cornerRadius(15.0)
+            .background(LinearGradient(gradient: Gradient(colors: [Color("buttonColorStart"), Color("buttonColorEnd")]), startPoint: .leading, endPoint: .trailing))
+            .cornerRadius(10.0)
     }
 }

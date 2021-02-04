@@ -19,49 +19,70 @@ struct PasswordDetail: View {
         ZStack {
             if !isEditPressed {
                 VStack(alignment: .leading) {
-                    //Username details
-                    Text("Username:")
-                        .font(.largeTitle)
-                    Text(password.username!)
-                        .padding()
-                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-                    
-                    Text("Password:")
-                        .font(.largeTitle)
-                    if !showPassword {
-                        Text("*******")
-                            .padding()
-                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-                        Button(action: {
-                            self.showPassword = true
-                        }, label: {
-                            Text("Show")
-                        }).buttonStyle(GradientButtonStyle())
-                    } else {
-                        Text(password.password!)
-                            .padding()
-                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-                        Button(action: {
-                            self.showPassword = false
-                        }, label: {
-                            Text("Hide")
-                        }).buttonStyle(GradientButtonStyle())
+                    Divider()
+                    VStack(alignment: .leading) {
+                        Text("Username:")
+                            .font(.largeTitle)
+                        Text(password.username!)
+                            .padding(.vertical, 20.0)
                     }
                     
-                    Button(action: {
-                        pasteboard.string = password.password
-                    }, label: {
-                        Text("Copy")
-                    }).buttonStyle(GradientButtonStyle())
+                    Divider()
                     
-                    Button(action: {
-                        self.isEditPressed = true
-                    }, label: {
-                        Text("Edit")
-                    }).buttonStyle(GradientButtonStyle())
+                    VStack(alignment: .leading) {
+                        Text("Password:")
+                            .font(.largeTitle)
+                        
+                        if !showPassword {
+                            Text("**********")
+                                .padding(.vertical, 20.0)
+                        } else {
+                            Text(password.password!)
+                                .padding(.vertical, 20.0)
+                        }
+                    }
+                    
+                    
+                    
+                    HStack {
+                        Spacer()
+                        if !showPassword {
+                            Button(action: {
+                                self.showPassword = true
+                            }, label: {
+                                Image(systemName: "eye")
+                            })
+                            
+                        } else {
+                            Button(action: {
+                                self.showPassword = false
+                            }, label: {
+                                Image(systemName: "eye.slash")
+                            })
+                        }
+                        Spacer()
+                        Button(action: {
+                            pasteboard.string = password.password
+                        }, label: {
+                            Image(systemName: "doc.on.doc")
+                        })
+                        Spacer()
+                        Button(action: {
+                            self.isEditPressed = true
+                        }, label: {
+                            Image(systemName: "pencil")
+                        })
+                        Spacer()
+                    }
+                    .padding(/*@START_MENU_TOKEN@*/.bottom, 20.0/*@END_MENU_TOKEN@*/)
+                    
+                    Divider()
+                    
+                    Spacer()
+                    Spacer()
+                    Spacer()
                 }
-                .padding(/*@START_MENU_TOKEN@*/.leading, -150.0/*@END_MENU_TOKEN@*/)
-                .padding(.top, -300.0)
+                .padding()
                 .navigationTitle(password.service!)
                 .navigationBarTitleDisplayMode(.inline)
             } else {
