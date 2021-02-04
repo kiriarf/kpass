@@ -45,7 +45,8 @@ Once you have something saved, you can go back to the All Passwords tab, where y
 ![allpwds](screenshots/allpwds.png)
 
 Tap on one of the items, and you will be taken to a detail screen:  
-<img src="screenshots/google.png" width="300">
+<img src="screenshots/google.png" width="300">       
+
 On this screen, you have three buttons: 
 1. The eye button will show or hide your password.  
 <img src="screenshots/show.png" width="150">
