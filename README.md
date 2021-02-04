@@ -48,7 +48,7 @@ Tap on one of the items, and you will be taken to a detail screen:
 ![google](screenshots/google.png)
 On this screen, you have three buttons: 
 1. The eye button will show or hide your password.  
-![show](screenshots/show.png)
+<img src="screenshots/show.png" width="150">
 2. The copy button will copy the password to your clipboard.   
 3. The pencil button will take you to the Edit Password page.   
 <img src="screenshots/editpwd.png" width="250">
