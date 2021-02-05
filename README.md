@@ -7,6 +7,8 @@ kpass is a simple-to-use password manager app. I built it for two reasons:
 
 kpass utilises Apple's Core Data framework to ensure persistence of your data even when the app is closed. It also uses FaceID for locking the app away from unwanted users. If the app is put into background, it will immediately lock itself.
 
+Please note, the UI, and some of the features (e.g. the Settings tab) are still unfinished. 
+
 ## Tech Stack
 
 | Technology          | Use                               |
