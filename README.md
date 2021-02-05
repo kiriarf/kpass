@@ -1,4 +1,4 @@
-# kpass
+# kpass (work in progress!)
 kpass is a simple-to-use password manager app. I built it for two reasons:
 
 1. To try native app development and Swift.
